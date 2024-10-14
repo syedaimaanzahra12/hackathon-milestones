@@ -1,0 +1,156 @@
+/* General Styles */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 5%;
+}
+
+.resume-container {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+  background-color: white;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a soft shadow for a cleaner look */
+}
+
+/* Left Section */
+.left-sec {
+  background-color: rgb(5, 51, 75);
+  color: aliceblue;
+  padding: 20px;
+  width: 35%;
+  min-width: 250px; /* Ensures the left section has a minimum width */
+  border-right: 5px solid rgb(48, 107, 146);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-align all the content */
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-top: 10%;
+  border-radius: 50%;
+  border: 5px solid aliceblue;
+  margin-bottom: 20px;
+}
+
+.summary-section,
+.learning-section,
+.contact-section {
+  width: 100%; /* Ensure that these sections take the full width */
+  text-align: center; /* Center align the text for consistency */
+  margin-bottom: 20px; /* Add space between each section */
+}
+
+/* Right Section */
+.right-sec {
+  background-color: aliceblue;
+  color: rgb(5, 51, 75);
+  padding: 20px;
+  width: 65%;
+}
+
+#afsd {
+  margin-left: 5%;
+  font-weight: 450;
+  font-size: large;
+  color: rgba(18, 65, 90, 0.725);
+}
+
+#name {
+  margin-left: 5%;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: x-large;
+  color: rgba(18, 65, 90, 0.86);
+}
+header {
+  margin-bottom: 8%;
+  margin-top: 5%;
+}
+h1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 5%;
+}
+
+section {
+  margin-bottom: 20px; /* Consistent spacing between sections */
+}
+
+.main-info {
+  margin-left: 5%;
+}
+
+/* Link Styling */
+a {
+  color: rgb(162, 214, 249);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+button {
+  font-size: medium;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: rgb(188, 225, 253);
+  box-shadow: 0 0 15px black;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center-align text in the button */
+  transition: background-color 0.3s, color 0.3s;
+}
+button:hover {
+  background-color: rgb(48, 107, 146);
+  color: rgb(188, 225, 253);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .resume-container {
+    flex-direction: row; /* Keep sections side by side on smaller screens */
+    width: 100%; /* Full width for mobile devices */
+  }
+
+  .left-sec,
+  .right-sec {
+    width: 50%; /* Each section takes 50% width on mobile */
+    border-right: none; /* Remove border when stacked */
+  }
+
+  .profile-pic {
+    width: 100px; /* Smaller size for the profile picture on mobile */
+    height: 100px;
+  }
+
+  h1,
+  h2,
+  p {
+    font-size: smaller; /* Adjust font sizes for readability on small screens */
+  }
+
+  li {
+    font-size: x-small;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 2%; /* Reduced padding for very small screens */
+  }
+
+  #name,
+  #afsd {
+    margin-left: 2%; /* Less margin for better alignment */
+  }
+}
